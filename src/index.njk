@@ -4,7 +4,7 @@ title: PAGES
 
 <h1>{{ title }}</h1>
 <h2>OPTION 1</h2>
-{% for item in collections.pages | excludeByFrontMatter("draft") %}
+{% for item in collections.pages | excludeByFrontMatter("excludeFromHomePage") %}
   <p>{{ item.data.title }}</p>
 {% endfor %}
 

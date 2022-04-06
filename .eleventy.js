@@ -10,7 +10,7 @@ module.exports = function (eleventyConfig) {
   // OPTION 2
   eleventyConfig.addCollection("filtered_pages", function (collectionApi) {
     const pages = collectionApi.getFilteredByTag("pages");
-    return [...pages].filter(page => page.data.draft !== true);
+    return [...pages].filter(page => page.data.excludeFromHomePage !== true);
   });
 
   return {
